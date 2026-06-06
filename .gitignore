@@ -1,0 +1,10 @@
+backend/venv/
+backend/__pycache__/
+frontend/lung.png
+frontend/lung_ct.png
+backend/ct_slices/
+*.nii
+*.pt
+*.bin
+*.ckpt
+.cache/

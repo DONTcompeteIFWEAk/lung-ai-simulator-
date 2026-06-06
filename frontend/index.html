@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lung AI Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+
+  <h1>🫁 Lung Damage AI</h1>
+  <p class="sub">AI Health Visualization</p>
+
+  <input id="age" placeholder="Age">
+  <input id="years" placeholder="Years of Smoking">
+  <input id="perday" placeholder="Cigarettes per Day">
+  <input id="exercise" placeholder="Exercise hours/week">
+  <input id="pollution" placeholder="Pollution exposure (1-10)">
+
+  <button onclick="sendData()">Generate Simulation</button>
+
+  <div id="loader" class="loader" style="display:none;"></div>
+
+  <div id="result"></div>
+
+  <!-- Severity Bar -->
+  <div class="bar-box">
+    <div id="bar" class="bar-fill"></div>
+  </div>
+
+  <!-- Comparison Section (hidden initially) -->
+  <div class="compare" id="imageSection" style="display:none;">
+    <img id="healthyImg">
+    <img id="lungImage">
+  </div>
+
+  <h3 id="ctTitle" style="display:none;">CT Scan Mode</h3>
+  <img id="ctImage" style="display:none;">
+
+  <!-- History Chart -->
+  <canvas id="historyChart"></canvas>
+
+  <h3>Doctor Style Report</h3>
+  <pre id="reportBox"></pre>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
